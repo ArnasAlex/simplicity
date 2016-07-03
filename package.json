@@ -8,6 +8,9 @@
     "name": "Arnas",
     "email": ""
   },
+  "scripts": {
+    "start": "node ./backend/server.js"
+  },
   "dependencies": {
     "async": "^1.4.0",
     "cookie-session": "^1.2.0",

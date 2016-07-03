@@ -42,7 +42,7 @@ var WebServerConfig = (function () {
             ip: process.env.IP,
             port: process.env.PORT,
             host: 'simplicitygame.herokuapp.com',
-            socketPort: 8000
+            socketPort: process.env.PORT // 8000
         };
         return values;
     };
