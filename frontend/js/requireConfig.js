@@ -1,3 +1,4 @@
+/// <reference path="typings/refs.d.ts" />
 var config = {
     paths: {
         'jquery': './lib/jquery',
@@ -5,7 +6,8 @@ var config = {
         'globalFunctions': './app/shared/globalFunctions'
     },
     shim: {
-        lodash: { exports: '_' }
+        lodash: { exports: '_' },
+        jquery: { exports: '$' }
     },
     deps: ['lodash', 'jquery', 'globalFunctions']
 };
