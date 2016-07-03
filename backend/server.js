@@ -1,3 +1,4 @@
+/// <reference path="./typings/refs.d.ts" />
 var http = require('http');
 var app = require('./core/application');
 var socket = require('./core/socket');
@@ -11,7 +12,7 @@ var Server = (function () {
         this.application = new app.Application();
         this.application.app.set('port', this.config.port);
         this.server = http.createServer(this.application.app);
-        this.server.listen(this.config.port, this.config.ip);
+        this.server.listen(this.config.port);
         this.server.on('error', function (err) {
             _this.onError(err);
         });

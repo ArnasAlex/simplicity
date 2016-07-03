@@ -18,7 +18,7 @@ class Server{
 
         this.server = http.createServer(this.application.app);
 
-        this.server.listen(this.config.port, this.config.ip);
+        this.server.listen(this.config.port);
 
         this.server.on('error', (err) => {this.onError(err);});
         this.server.on('listening', () => {this.onListening();});

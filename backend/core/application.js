@@ -1,3 +1,4 @@
+/// <reference path="./../typings/refs.d.ts" />
 var express = require('express');
 var session = require('cookie-session');
 var CFG = require('../config/webServerConfig');
@@ -15,7 +16,7 @@ var Application = (function () {
         this.app.set('trust proxy', 1);
         this.app.use(session({
             keys: ["S1mpl!city-k3y"],
-            maxAge: 30 * 60 * 1000
+            maxAge: 30 * 60 * 1000 // session timeout 30 min
         }));
     };
     Application.prototype.initStaticFiles = function () {
@@ -25,6 +26,7 @@ var Application = (function () {
     Application.prototype.initRoutes = function () {
         this.app.get('/getws', function (req, res) {
             var host = req.headers['host'];
+            //var x = req.session();
             var portNr = host.indexOf(':');
             if (portNr > 0) {
                 host = host.substr(0, portNr);
