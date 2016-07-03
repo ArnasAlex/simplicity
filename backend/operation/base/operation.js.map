@@ -1,0 +1,1 @@
+{"version":3,"file":"operation.js","sourceRoot":"","sources":["operation.ts"],"names":["Operation","Operation.constructor","Operation.execute"],"mappings":"AAAA,IAAa,SAAS;IAAtBA,SAAaA,SAASA;IAItBC,CAACA;IAHUD,2BAAOA,GAAdA,UAAeA,eAAuDA;QAClEE,MAAMA,KAAKA,CAACA,4BAA4BA,CAACA,CAACA;IAC9CA,CAACA;IACLF,gBAACA;AAADA,CAACA,AAJD,IAIC;AAJY,iBAAS,GAAT,SAIZ,CAAA"}

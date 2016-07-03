@@ -1,0 +1,6 @@
+node_modules/
+.idea/
+.tscache/
+test/frontend/coverage/
+specRunnerFrontend.html
+.grunt/
