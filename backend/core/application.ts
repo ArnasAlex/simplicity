@@ -37,7 +37,11 @@ export class Application {
             if (portNr > 0){
                 host = host.substr(0, portNr);
             }
-            res.send('ws://' + host + ':' + CFG.WebServerConfig.getConfig().socketPort);
+            var url = 'ws://' + host;
+            if (CFG.WebServerConfig.getEnvironment() === CFG.Environments.Local){
+                url += ':' + CFG.WebServerConfig.getConfig().socketPort;
+            }
+            res.send(url);
         });
     }
 
